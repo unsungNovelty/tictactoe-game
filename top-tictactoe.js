@@ -105,9 +105,10 @@ const userPlays = (() => {
 
                 if (Object.keys(arr[0]).length === 9) {
                     infoElement.innerText = 'Player 2 marked "' + player2.toUpperCase() + '" in postion ' + dataKey + ' AND THIS GAME IS A DRAW!';
+                } else {
+                    infoElement.innerText = 'Player 2 marked "' + player2.toUpperCase() + '" in postion ' + dataKey;
                 }
 
-                infoElement.innerText = 'Player 2 marked "' + player2.toUpperCase() + '" in postion ' + dataKey;
         
         } else if (arr[0][Object.keys(arr[0])[Object.keys(arr[0]).length -1]] === player2) {
             
@@ -117,9 +118,9 @@ const userPlays = (() => {
 
                 if(Object.keys(arr[0]).length === 9) {
                     infoElement.innerText = 'Player 1 played ' + player1.toUpperCase() + ' in postion ' + dataKey + ' AND THIS GAME IS A DRAW!';
+                } else {
+                    infoElement.innerText = 'Player 1 played ' + player1.toUpperCase() + ' in postion ' + dataKey;
                 }
-
-                infoElement.innerText = 'Player 1 played ' + player1.toUpperCase() + ' in postion ' + dataKey;
 
         } else {
             infoElement.innerText = 'SOME ERROR!'
