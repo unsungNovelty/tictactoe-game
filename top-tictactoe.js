@@ -9,7 +9,7 @@ const selectSymbol = (() => {
 
     const selectListener = () => {
         for (let select of selections) {
-            select.addEventListener('TouchEvent', () => {
+            select.addEventListener('touchstart', () => {
                 if (firstPlayerSelection === '') {
                     
                     firstPlayerSelection = select.innerText;
@@ -39,7 +39,7 @@ const selectSymbol = (() => {
     const tiles = document.querySelectorAll('.item');
     const gameboardListener = () => {
         for (let tile of tiles) {
-            tile.addEventListener('TouchEvent', () => {
+            tile.addEventListener('touchstart', () => {
                 if (!firstPlayerSymbol) {
                     infoElement.innerText = 'PLEASE SELECT "X" OR "O" FOR PLAYER 1!'
                 } else {
