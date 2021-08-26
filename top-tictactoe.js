@@ -95,8 +95,6 @@ const userPlays = (() => {
 
                 infoElement.innerText = 'PLAYER 2 WITH "' + player2.toUpperCase() + '" HAVE WON THE GAME!';
 
-        } else if(Object.keys(arr[0]).length === 9) {
-            infoElement.innerText = 'THIS GAME WAS DRAWN!'
         } else if(arr[0][Object.keys(arr[0])[Object.keys(arr[0]).length -1]] === player1) {
             
                 let dataKeyString = 'Position: ' + dataKey;
@@ -105,9 +103,31 @@ const userPlays = (() => {
 
                 if (Object.keys(arr[0]).length === 9) {
                     infoElement.innerText = 'Player 2 marked "' + player2.toUpperCase() + '" in postion ' + dataKey + ' AND THIS GAME IS A DRAW!';
-                } else {
+                } else if(arr[0]['Position: 1'] === player1 && arr[0]['Position: 2'] === player1 && arr[0]['Position: 3'] === player1   ||
+                arr[0]['Position: 4'] === player1 && arr[0]['Position: 5'] === player1 && arr[0]['Position: 6'] === player1 ||
+                arr[0]['Position: 7'] === player1 && arr[0]['Position: 8'] === player1 && arr[0]['Position: 9'] === player1 ||
+                arr[0]['Position: 1'] === player1 && arr[0]['Position: 4'] === player1 && arr[0]['Position: 7'] === player1 ||
+                arr[0]['Position: 2'] === player1 && arr[0]['Position: 5'] === player1 && arr[0]['Position: 8'] === player1 ||
+                arr[0]['Position: 3'] === player1 && arr[0]['Position: 6'] === player1 && arr[0]['Position: 9'] === player1 ||
+                arr[0]['Position: 1'] === player1 && arr[0]['Position: 5'] === player1 && arr[0]['Position: 9'] === player1 ||
+                arr[0]['Position: 3'] === player1 && arr[0]['Position: 5'] === player1 && arr[0]['Position: 7'] === player1) {
+    
+                infoElement.innerText = 'PLAYER 1 WITH "' + player1.toUpperCase() + '" HAVE WON THE GAME!';
+    
+            } else if(arr[0]['Position: 1'] === player2 && arr[0]['Position: 2'] === player2 && arr[0]['Position: 3'] === player2   ||
+                arr[0]['Position: 4'] === player2 && arr[0]['Position: 5'] === player2 && arr[0]['Position: 6'] === player2 ||
+                arr[0]['Position: 7'] === player2 && arr[0]['Position: 8'] === player2 && arr[0]['Position: 9'] === player2 ||
+                arr[0]['Position: 1'] === player2 && arr[0]['Position: 4'] === player2 && arr[0]['Position: 7'] === player2 ||
+                arr[0]['Position: 2'] === player2 && arr[0]['Position: 5'] === player2 && arr[0]['Position: 8'] === player2 ||
+                arr[0]['Position: 3'] === player2 && arr[0]['Position: 6'] === player2 && arr[0]['Position: 9'] === player2 ||
+                arr[0]['Position: 1'] === player2 && arr[0]['Position: 5'] === player2 && arr[0]['Position: 9'] === player2 ||
+                arr[0]['Position: 3'] === player2 && arr[0]['Position: 5'] === player2 && arr[0]['Position: 7'] === player2) {
+    
+                    infoElement.innerText = 'PLAYER 2 WITH "' + player2.toUpperCase() + '" HAVE WON THE GAME!';
+    
+            } else {
                     infoElement.innerText = 'Player 2 marked "' + player2.toUpperCase() + '" in postion ' + dataKey;
-                }
+            }
 
         
         } else if (arr[0][Object.keys(arr[0])[Object.keys(arr[0]).length -1]] === player2) {
@@ -118,9 +138,31 @@ const userPlays = (() => {
 
                 if(Object.keys(arr[0]).length === 9) {
                     infoElement.innerText = 'Player 1 played ' + player1.toUpperCase() + ' in postion ' + dataKey + ' AND THIS GAME IS A DRAW!';
-                } else {
+                } else if(arr[0]['Position: 1'] === player1 && arr[0]['Position: 2'] === player1 && arr[0]['Position: 3'] === player1   ||
+                arr[0]['Position: 4'] === player1 && arr[0]['Position: 5'] === player1 && arr[0]['Position: 6'] === player1 ||
+                arr[0]['Position: 7'] === player1 && arr[0]['Position: 8'] === player1 && arr[0]['Position: 9'] === player1 ||
+                arr[0]['Position: 1'] === player1 && arr[0]['Position: 4'] === player1 && arr[0]['Position: 7'] === player1 ||
+                arr[0]['Position: 2'] === player1 && arr[0]['Position: 5'] === player1 && arr[0]['Position: 8'] === player1 ||
+                arr[0]['Position: 3'] === player1 && arr[0]['Position: 6'] === player1 && arr[0]['Position: 9'] === player1 ||
+                arr[0]['Position: 1'] === player1 && arr[0]['Position: 5'] === player1 && arr[0]['Position: 9'] === player1 ||
+                arr[0]['Position: 3'] === player1 && arr[0]['Position: 5'] === player1 && arr[0]['Position: 7'] === player1) {
+    
+                infoElement.innerText = 'PLAYER 1 WITH "' + player1.toUpperCase() + '" HAVE WON THE GAME!';
+    
+            } else if(arr[0]['Position: 1'] === player2 && arr[0]['Position: 2'] === player2 && arr[0]['Position: 3'] === player2   ||
+                arr[0]['Position: 4'] === player2 && arr[0]['Position: 5'] === player2 && arr[0]['Position: 6'] === player2 ||
+                arr[0]['Position: 7'] === player2 && arr[0]['Position: 8'] === player2 && arr[0]['Position: 9'] === player2 ||
+                arr[0]['Position: 1'] === player2 && arr[0]['Position: 4'] === player2 && arr[0]['Position: 7'] === player2 ||
+                arr[0]['Position: 2'] === player2 && arr[0]['Position: 5'] === player2 && arr[0]['Position: 8'] === player2 ||
+                arr[0]['Position: 3'] === player2 && arr[0]['Position: 6'] === player2 && arr[0]['Position: 9'] === player2 ||
+                arr[0]['Position: 1'] === player2 && arr[0]['Position: 5'] === player2 && arr[0]['Position: 9'] === player2 ||
+                arr[0]['Position: 3'] === player2 && arr[0]['Position: 5'] === player2 && arr[0]['Position: 7'] === player2) {
+    
+                    infoElement.innerText = 'PLAYER 2 WITH "' + player2.toUpperCase() + '" HAVE WON THE GAME!';
+    
+            } else {
                     infoElement.innerText = 'Player 1 played ' + player1.toUpperCase() + ' in postion ' + dataKey;
-                }
+            }
 
         } else {
             infoElement.innerText = 'SOME ERROR!'
