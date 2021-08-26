@@ -1,0 +1,72 @@
+body {
+    display: grid;
+    justify-items: center;
+    margin: auto;
+    height: auto;
+    width: 100%;
+    color: hsl(220, 2%, 35%);
+}
+
+.container {
+    display: grid;
+    justify-items: center;
+}
+
+.gameBoard {
+    display: grid;
+    grid-template: repeat(3, minmax(100px, 1fr)) / repeat(3, minmax(100px, 1fr)); 
+    gap: 5px;
+    margin-top: 10px;    
+    background-color: hsl(220, 2%, 35%);
+}
+
+/* .gameBoard:hover {
+} */
+
+.item {
+    justify-items: center;
+    background-color: white;
+    gap: 2px 2px;
+    text-align: center;
+    font-size: 80px;
+}
+
+.item:hover {
+    background-color: whitesmoke;
+}
+
+.selectionContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 30px;
+    width: auto;
+    gap: 25px;
+    justify-items: center;
+    align-items: center;
+}
+
+.selection {
+    grid-column-start: auto;
+    border-radius: 3px;
+    box-shadow: 0 0 8px 0 #d3d3d3;
+    padding: 15px 15px 15px 15px;
+    text-align: center;
+
+}
+
+.selection:hover {
+    box-shadow: 0 0 8px 0 hsl(220, 2%, 35%);
+}
+
+#info {
+    display: grid;
+    grid-template-columns: 1;
+    align-self: center;
+    justify-self: center;
+    margin-top: 30px;
+    padding: 20px;
+    width: auto;
+    border-radius: 3px;
+    font-style: italic;
+    box-shadow: 0 0 1px 0 #d3d3d3;
+}
